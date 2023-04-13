@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap");
+
+/* ================== GLOBAL ================= */
+:root {
+    --text: #fffcf9;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(45deg, #0074c2 0%, #000000 50%, #0074c2 100%) no-repeat;
+}
+body {
+    background: var(--background);
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+}
+
+/* ================== HEADER ================= */
+header {
+    text-align: center;
+    padding: 1rem 0;
+}
+.header__title {
+    font-family: "Bebas Neue", cursive;
+    text-shadow: 10px 5px 1px #000;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+}
+.header__message {
+    padding: 1rem 0;
+}
+.message__logo {
+    width: 90px;
+    height: 98px;
+    margin: 0 auto;
+    background: url("../public/images/logo.svg") no-repeat center/cover;
+}
+.message__text {
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+/* ================== MOVIE CONTAINER ================= */
+.movie__container {
+    padding: 0 2rem;
+    text-align: center;
+}
+.movie__container.closed {
+    display: none;
+}
+.movie__poster {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movie__poster img {
+    width: 100%;
+    max-width: 280px;
+    border-width: 6px;
+    border-style: groove;
+    border-image: linear-gradient(125deg, #0074c2 0%, #001569 50%, #0074c2 100%) 1;
+}
+.movie__title {
+    font-weight: 600;
+    font-size: 2rem;
+}
+.movie__genre {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.movie__synopsis {
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* ================== SEARCH MOVIE ================= */
+.search__movie {
+    text-align: center;
+    padding: 2rem 0;
+}
+.search__button {
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+    background-color: var(--bg-button);
+    padding: 0.85rem;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    font-weight: 600;
+    color: #010101;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.search__button:hover {
+    border-color: #c12a23;
+}
+.search__button--image {
+    height: 25px;
+}
+.search__message {
+    font-size: 14px;
+}
+.footer__text__1 {
+    padding: 5rem 0 0.5rem 0;
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    text-shadow: 10px 5px 1px #000;
+    font-size: 1.5rem;
+}
+.footer__text__2 {
+    padding: 0 0 2rem 0;
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    text-shadow: 10px 5px 1px #000;
+    font-size: 1.5rem;
+}
+
+/* ================== RESPONSIVE ================= */
+@media (min-width: 1000px) {
+    .header__title {
+        font-size: 7.5rem;
+    }
+    .message__text {
+        font-size: 2rem;
+    }
+    .movie__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        text-align: start;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+    .movie__poster {
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .movie__poster img {
+        max-width: none;
+    }
+    .movie__title {
+        font-size: 2.5rem;
+    }
+    .movie__genre {
+        font-size: 1.5rem;
+    }
+    .movie__synopsis {
+        font-size: 1.2rem;
+    }
+    .search__button {
+        font-size: 1.15rem;
+    }
+}

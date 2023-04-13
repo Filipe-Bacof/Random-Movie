@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href="./src/public/images/logo.svg" />
+        <title>Ramdom Movie</title>
+        <link rel="stylesheet" href="./src/css/style.css" />
+        <script defer type="module" src="./src/scripts/main.ts"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="header__title">Ramdom Movie</h1>
+            <div class="header__message">
+                <div class="message__logo"></div>
+                <p class="message__text">Posso te indicar um filme aleatório?</p>
+            </div>
+        </header>
+        <main>
+            <section class="movie__container closed" data-movie-container>
+                <div class="movie__poster">
+                    <img src="" alt="" data-movie-poster />
+                </div>
+                <div class="movie__description">
+                    <h2 class="movie__title" data-movie-title></h2>
+                    <p class="movie__genre">Gênero: <span data-movie-genre></span></p>
+                    <p class="movie__synopsis" data-movie-synopsis></p>
+                </div>
+            </section>
+            <div class="search__movie">
+                <button class="search__button" data-button-search-movie><img class="search__button--image" src="./src/public/images/logo.svg" />Encontrar filme</button>
+                <p class="search__message">Clique em "Encontrar filme" que uma nova sugestão será procurada.</p>
+            </div>
+        </main>
+        <footer>
+            <p class="footer__text__1">Code by Filipe Bacof</p>
+            <p class="footer__text__2">Using TheMovieDB API</p>
+        </footer>
+    </body>
+</html>
